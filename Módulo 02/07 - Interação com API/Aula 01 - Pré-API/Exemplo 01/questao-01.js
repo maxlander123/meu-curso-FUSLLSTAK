@@ -14,8 +14,19 @@ function teste(){
 }
 */
 
-setInterval(acionar, 2000)
+//setInterval(acionar, 2000)
 
+//function acionar(){
+   // document.getElementById("demo").textContent += "Estuda"
+///
+/*setTimeout(acionar,3000)
 function acionar(){
-    document.getElementById("demo").textContent += "Estuda"
-}
+    alert("UI")
+}*/
+/*setInterval(teste, 2000)
+function teste(){
+    let elemento = Document.getElementByid("DEMO")
+    elemento.textContente = elemento.textContente + "Estudar"
+
+}*/
+
