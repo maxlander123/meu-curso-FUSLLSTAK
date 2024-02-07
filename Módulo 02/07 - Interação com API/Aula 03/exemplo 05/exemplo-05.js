@@ -1,9 +1,13 @@
-     async function procura (){
-    let mensagem = await fetch ("rato.txt")
-    let fortaleza = await mensagem.text()
 
-    console.log(fortaleza)
-    alert(fortaleza)
+
+async function procurar () {
+    let tia = await fetch ("rato.txt")
+    let curso = await tia .text()
+
+    console.log(curso)
+    alert(curso)
 }
+
 procurar()
+
 
