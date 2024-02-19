@@ -1,19 +1,14 @@
+async function resolver(){
+    let busca1 = await fetch("exemplo-01.json")
+    let tarefas = await busca1.json()
 
-
-
-        let resposta = await fetch("pizza.txt")
-         let convertido = await resposta . text()
-       
-
-    async function obter(){
-        let resposta = await fetch("pizza.txt")
-        let convertido = await resposta . text()
-        console.log(convertido)
-    
+    for(let x in tarefas){
+        document.body.innerHTML  += `<h1> ${x} </h1>`
     }
-    obter()
-    [
-        "maça",
-        "caju",
-        "castanha"
-      ]
+
+   
+    
+    
+
+}
+resolver()
