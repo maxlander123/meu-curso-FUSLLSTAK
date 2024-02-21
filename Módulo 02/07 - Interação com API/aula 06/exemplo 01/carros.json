@@ -1,0 +1,25 @@
+[
+        {
+        "modelo":"monza",
+        "marca":"chevrolet",
+        "ano":1995,
+        "cor":"vinho"
+            
+        },
+    
+    {
+        "modelo":"320i",
+        "marca":"BmW",
+        "ano":2005,
+        "cor":"prata"
+        
+    },
+    {
+        "modelo":"uno com escada",
+        "marca":"FIAT",
+        "ano":2029,
+        "cor":"branco"
+        
+    } 
+]
+    
