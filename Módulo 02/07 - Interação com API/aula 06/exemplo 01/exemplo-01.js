@@ -1,6 +1,6 @@
-async function concessionaria(){
-    let resultado = await fetch("carros.json")
-    let carros = await resultado.json()
+//async function concessionaria(){
+    //let resultado = await fetch("carros.json")
+   // let carros = await resultado.json()
 
    // alert("a marca é " +carros.marca+  " o modelo é " +carros.modelo+ " o ano é " +carros.ano + " e a cor é " +carros.cor )
     //alert(carros.marca)
@@ -8,12 +8,18 @@ async function concessionaria(){
 
     /// alert(carros[1].modelo)
 
-    document.body.innerHTML += `
-        <p>"a marca do carro é " ${carros[0].} </P>
-    `
+  //  document.body.innerHTML += `
+       // <p>"a marca do carro é " ${carros[0].} </P>
+     //   <p> o modeli do carro é
+   // `
 
 
+
+
+
+concessionaria()  
+async function concessionaria(){
+    let resultado = await fetch("moto.json")
+    let moto = await resultado.json()
 
 }
-
-concessionaria() 
