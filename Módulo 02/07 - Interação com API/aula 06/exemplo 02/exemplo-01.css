@@ -1,0 +1,9 @@
+.lista-card{
+    display:flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+}
+.card{
+    border: 1px solid #000;
+}
