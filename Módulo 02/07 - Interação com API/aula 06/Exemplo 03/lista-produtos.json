@@ -1,0 +1,29 @@
+[
+    {
+        "nome": "Leite",
+        "descricao": "em po",
+        "valorcomdesconto":30,
+        "valorsemdesconto":25
+    },
+
+    {
+        "nome": "caneta",
+        "descricao": "pra escrever, ponta fina",
+        "valorcomdesconto":5,
+        "valorsemdesconto":8
+    },
+
+    {
+        "nome": "creme dental",
+        "descricao": "escovar dentes",
+        "valorcomdesconto":16,
+        "valorsemdesconto":20
+    },
+
+    {
+        "nome": "botijao de gas",
+        "descricao": "ascender fogo",
+        "valorcomdesconto":85,
+        "valorsemdesconto":100
+    }
+]
