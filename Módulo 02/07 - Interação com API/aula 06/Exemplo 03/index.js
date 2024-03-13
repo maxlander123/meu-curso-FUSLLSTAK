@@ -10,7 +10,12 @@
             divlista.innerHTML +=`
                 <div class="card">
                     <h3>${produto.nome}</h3>
-                    <p>${produto.descricao}</p>
+                    <img src="${produto.img}" width="200" height="200">
+                     <p>${produto.descricao}</p>
+                    <div class="valores">
+                        <span class="valorcom">R$ ${produto.valorcomdesconto.toFixed(2).replace(".",",")}</span>
+                        <span class="valorsem">R$ ${produto.valorsemdesconto.toFixed(2).replace(".",",")}</span>
+                    <div>
                 </div>    
             `
         
