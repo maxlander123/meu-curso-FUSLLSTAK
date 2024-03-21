@@ -33,7 +33,9 @@
 
 }
     function clicou(){
+        console.log(this)
         let elementoId = this.getAttribute("data-id")
         window.location.href = "detalhes.html?produto-id=" + elementoId
+        // window.location.href = "detalhes.html?"produtos-id="+ e"
     } 
 busca()                       

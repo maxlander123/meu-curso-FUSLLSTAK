@@ -3,4 +3,10 @@ async function buscarDetalhes(){
     let produtos = await busca.json()
 
    // document.body.
+   let paramentro = new URLSearchParams(window.location,search)
+   let paramentroId = paramentros.get("produto-id")
+   alert(paramentroId)
+
 }
+
+buscarDetalhes()
