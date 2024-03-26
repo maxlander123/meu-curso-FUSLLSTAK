@@ -1,5 +1,5 @@
     // FUNÇAO ASSINCRONA PARA FAZER USO DO  AWAIT
-    async function busca(){
+        async function busca(){
         //await PARA a exercuçao do programa aquardando
         // O RESULTADO DO COMANDO FETCH().
         let procura= await fetch("lista-produtos.json")
@@ -8,7 +8,7 @@
         let divlista = document.getElementById("lista-card")
         for(let produto of produtos){
             divlista.innerHTML +=`
-                <div class="card" data-id="${produto.id}">
+                <div class="card"> data-id="${produto.id}">
                     <h3>${produto.nome}</h3>
                     <img src="${produto.img}" width="200" height="200">
                      <p>${produto.descricao}</p>
