@@ -7,25 +7,55 @@
     },
 
     {
-        "marca":"",
+        "marca":"sansung",
         "IMG":"https://www.temperfrio.com.br/uploads/produtos/ar-condicionado-split-piso-teto-elgin-phf-60000-btus-frio-380v-trifasico-20151113155723.jpg",
         "modelo":"htx",
         "valor": 5.700
     },
 
     {
-        "marca":"elgin",
+        "marca":"york",
         "IMG":"https://www.temperfrio.com.br/uploads/produtos/ar-condicionado-split-piso-teto-elgin-phf-60000-btus-frio-380v-trifasico-20151113155723.jpg",
         "modelo":"htx",
         "valor": 5.700
     },
 
     {
-        "marca":"elgin",
+        "marca":"mideia stilo",
         "IMG":"https://www.temperfrio.com.br/uploads/produtos/ar-condicionado-split-piso-teto-elgin-phf-60000-btus-frio-380v-trifasico-20151113155723.jpg",
         "modelo":"htx",
         "valor": 5.700
     }
+
+
+]
+
+[
+    {
+        "nome": "João da Silva",
+        "idade": 30,
+        "email": "joao.silva@email.com",
+        "telefones": [
+            "123456789",
+            "987654321"
+        ],
+        "endereco": {
+            "rua": "Rua das Flores",
+            "numero": 123,
+            "cidade": "São Paulo"
+        },
+        "interesses": [
+            "programação",
+            "viagens",
+            "esportes"
+        ]
+    }
+
+
+
+
+
+
 
 
 ]
