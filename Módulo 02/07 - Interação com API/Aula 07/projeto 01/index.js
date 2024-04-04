@@ -1,41 +1,56 @@
- // FUNÇAO ASSINCRONA PARA FAZER USO DO  AWAIT
- async function busca(){
-    //await PARA a exercuçao do programa aquardando
-    // O RESULTADO DO COMANDO FETCH().
-    let procura= await fetch("lista-produtos.json")
-    let produtos= await procura.json()
+let powerButton = document.getElementById('powerButton');
+let increaseTempButton = document.getElementById('increaseTempButton');
+let decreaseTempButton = document.getElementById('decreaseTempButton');
+let temperatureInput = document.getElementById('temperature');
+let acImage = document.getElementById('acImage');
 
-    let divlista = document.getElementById("lista-card")
-    for(let produto of produtos){
-        divlista.innerHTML +=`
-            <div class="card"> data-id="${produto.id}">
-                <h3>${produto.nome}</h3>
-                <img src="${produto.img}" width="200" height="200">
-                 <p>${produto.descricao}</p>
-                <div class="valores">
-                    <span class="valorcom">R$ ${produto.valorcomdesconto.toFixed(2).replace(".",",")}</span>
-                    <span class="valorsem">R$ ${produto.valorsemdesconto.toFixed(2).replace(".",",")}</span>
-                <div>
-            </div>    
-        `
-    
+let remoteState = {};
+
+// Carrega estado do controle remoto do JSON
+fetch('remote.json')
+    .then(response => response.json())
+    .then(data => {
+        remoteState = data;
+        updateRemoteUI();
+    });
+
+powerButton.addEventListener('click', () => {
+    remoteState.powerOn = !remoteState.powerOn;
+    updateRemoteUI();
+    updateJSON();
+});
+
+increaseTempButton.addEventListener('click', () => {
+    if (remoteState.temperature < 30) {
+        remoteState.temperature++;
+        updateRemoteUI();
+        updateJSON();
     }
-    //busca por todos elementos html que contem"card"
-    // como valor do paramentro "class".
-    let divsCards = document.getElementsByClassName("card")
-    // Add em cada Div card um evento que escuta quando
-    // o usuario clica nele ,e chama uma funçao.
-    for(let card of divsCards){
-        card.addEventListener("click",clicou)
+});
 
-
+decreaseTempButton.addEventListener('click', () => {
+    if (remoteState.temperature > 16) {
+        remoteState.temperature--;
+        updateRemoteUI();
+        updateJSON();
     }
+});
 
+function updateRemoteUI() {
+    if (remoteState.powerOn) {
+        acImage.src = 'images/ac_on.jpg';
+    } else {
+        acImage.src = 'images/ac_off.jpg';
+    }
+    temperatureInput.value = remoteState.temperature;
 }
-function clicou(){
-    console.log(this)
-    let elementoId = this.getAttribute("data-id")
-    window.location.href = "detalhes.html?produto-id=" + elementoId
-    // window.location.href = "detalhes.html?"produtos-id="+ e"
-} 
-busca()                       
+
+function updateJSON() {
+    fetch('remote.json', {
+        method: 'PUT',
+        body: JSON.stringify(remoteState),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+}
