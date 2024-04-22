@@ -1,56 +1,44 @@
-let powerButton = document.getElementById('powerButton');
-let increaseTempButton = document.getElementById('increaseTempButton');
-let decreaseTempButton = document.getElementById('decreaseTempButton');
-let temperatureInput = document.getElementById('temperature');
-let acImage = document.getElementById('acImage');
-
-let remoteState = {};
-
-// Carrega estado do controle remoto do JSON
-fetch('remote.json')
-    .then(response => response.json())
-    .then(data => {
-        remoteState = data;
-        updateRemoteUI();
-    });
-
-powerButton.addEventListener('click', () => {
-    remoteState.powerOn = !remoteState.powerOn;
-    updateRemoteUI();
-    updateJSON();
-});
-
-increaseTempButton.addEventListener('click', () => {
-    if (remoteState.temperature < 30) {
-        remoteState.temperature++;
-        updateRemoteUI();
-        updateJSON();
+ 
+ async function busca(){
+    
+    let procura= await fetch("ram.json")
+    let produtos= await procura.json()
+   
+    let divlista = document.getElementById("lista-card")
+    for(let produto of produtos){
+       divlista.innerHTML += `
+       <div class="card" data-id="${produto.id}">
+           
+           <h3>${produto.nome}</h3>
+           <img style="border: 3px solid black" src="${produto.img}" width="auto" height="200">
+           <p>${produto.descricao}</p>
+           <div class="valores">
+               <span class="valorcom">R$ ${produto.valorcomdesconto.toFixed(2).replace(".",",")}</span>
+               <span class="valorsem">R$ ${produto.valorsemdesconto.toFixed(2).replace(".",",")}</span>
+           </div>
+   
+           
+       </div>
+   `;
+    
+    }    let divsCards = document.getElementsByClassName("card")
+   
+   
+    for(let card of divsCards){
+        card.addEventListener("click",clicou)
+   
     }
-});
-
-decreaseTempButton.addEventListener('click', () => {
-    if (remoteState.temperature > 16) {
-        remoteState.temperature--;
-        updateRemoteUI();
-        updateJSON();
-    }
-});
-
-function updateRemoteUI() {
-    if (remoteState.powerOn) {
-        acImage.src = 'images/ac_on.jpg';
-    } else {
-        acImage.src = 'images/ac_off.jpg';
-    }
-    temperatureInput.value = remoteState.temperature;
-}
-
-function updateJSON() {
-    fetch('remote.json', {
-        method: 'PUT',
-        body: JSON.stringify(remoteState),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    });
-}
+   }
+   busca()
+   
+   function clicou(){
+    let elementoId = this.getAttribute("data-id")
+    window.location.href = "detalhes.html?produto-id=" + elementoId
+   }
+   
+   
+   
+   
+   
+                        
+   

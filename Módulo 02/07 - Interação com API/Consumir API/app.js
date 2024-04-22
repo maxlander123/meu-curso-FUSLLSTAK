@@ -26,6 +26,6 @@ function exibirProdutos(produtos) {
                 </div>
             </div>
         </li>
-        `;
+        `
     }
 }
