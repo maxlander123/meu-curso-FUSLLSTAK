@@ -10,9 +10,9 @@
 
     {
         "id":2,
-        "nome": "Controle Eos ar ",
+        "nome": "controle universal ",
         "img":"https://www.frigelar.com.br/ccstore/v1/images/?source=/file/v6433236077648154507/products/kit000687.1.jpg&height=600&width=900",
-        "descricao": "split",
+        "descricao": "universal,multiplos ,modelos",
         "valorcomdesconto":85,
         "valorsemdesconto":92
     },
@@ -21,7 +21,7 @@
         "id":3,
         "nome": "Controle Samsung Ar",
         "img":"https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQjErlz_36TFcluFLPezURo_yQPulrwq8amtQ6fzbsa071zzjuculD8XoEGpA5v2K0kutImpGUaYe_Od1sSdOulkl4HawWhhvHD0xZcKetGzBQwFKiEhVJhztuk6V2h8Yy_9Gq_Ng&usqp=CAc",
-        "descricao": "split",
+        "descricao": "split,9/12/18/24/BTUS",
         "valorcomdesconto":145,
         "valorsemdesconto":160
     },
@@ -29,8 +29,8 @@
     {
         "id": 4,
         "nome": "Controle consul ar",
-        "img":"https://http2.mlstatic.com/D_NQ_NP_679447-MLB72937564742_112023-O.webp",
-        "descricao": "Split",
+        "img":["https://http2.mlstatic.com/D_NQ_NP_679447-MLB72937564742_112023-O.webp"],
+        "descricao": "Split,7/9/12/18/24/36/60/ BTUS",
         "valorcomdesconto":85,
         "valorsemdesconto":92
     }
